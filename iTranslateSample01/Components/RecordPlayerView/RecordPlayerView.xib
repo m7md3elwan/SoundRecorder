@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Semibold.ttf">
+            <string>SFUIText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordPlayerView" customModule="iTranslateSample01" customModuleProvider="target">
+            <connections>
+                <outlet property="currentTimeLabel" destination="hMy-VP-Dnc" id="Dqw-1y-qFJ"/>
+                <outlet property="durationLabel" destination="qxQ-rh-f4h" id="i6s-r8-dAa"/>
+                <outlet property="slider" destination="DDd-LS-QXg" id="atm-OZ-ayJ"/>
+                <outlet property="trackNameLabel" destination="Wmm-yf-LwK" id="vbZ-sQ-fuY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9qY-Ee-lsM">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="138"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jE6-u8-dNc">
+                    <rect key="frame" x="15" y="5" width="506" height="104"/>
+                    <subviews>
+                        <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DDd-LS-QXg">
+                            <rect key="frame" x="-2" y="0.0" width="510" height="31"/>
+                            <color key="tintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="thumbTintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </slider>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x8D-dh-yX3">
+                            <rect key="frame" x="0.0" y="34" width="506" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMy-VP-Dnc">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="16"/>
+                                    <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="13"/>
+                                    <color key="textColor" red="0.054901960780000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxQ-rh-f4h">
+                                    <rect key="frame" x="253" y="0.0" width="253" height="16"/>
+                                    <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="13"/>
+                                    <color key="textColor" red="0.054901960780000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GO8-VD-GEE">
+                            <rect key="frame" x="0.0" y="54" width="506" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ovr-EE-dVE">
+                                    <rect key="frame" x="0.0" y="0.0" width="506" height="50"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note.list" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fVY-9d-Yze">
+                                            <rect key="frame" x="0.0" y="0.5" width="50" height="49.5"/>
+                                            <color key="tintColor" red="0.83921568629999999" green="0.85882352939999995" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Jqb-ZQ-rpr"/>
+                                                <constraint firstAttribute="width" constant="50" id="QTz-fX-QOs"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="X9G-EG-fPx">
+                                            <rect key="frame" x="60" y="16" width="446" height="18"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-yf-LwK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="446" height="18"/>
+                                                    <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="15"/>
+                                                    <color key="textColor" red="0.054901960780000002" green="0.047058823530000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cWr-xe-rbg" firstAttribute="trailing" secondItem="jE6-u8-dNc" secondAttribute="trailing" constant="15" id="9aw-Dp-TwV"/>
+                <constraint firstItem="jE6-u8-dNc" firstAttribute="leading" secondItem="cWr-xe-rbg" secondAttribute="leading" constant="15" id="KrK-YI-yS4"/>
+                <constraint firstItem="jE6-u8-dNc" firstAttribute="top" secondItem="9qY-Ee-lsM" secondAttribute="top" constant="5" id="cev-8c-6aK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="cWr-xe-rbg"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="53.623188405797109" y="-90.401785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="music.note.list" catalog="system" width="64" height="58"/>
+    </resources>
+</document>

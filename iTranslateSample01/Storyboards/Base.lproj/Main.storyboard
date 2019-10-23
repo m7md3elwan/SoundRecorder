@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+        <array key="SFUIText-Semibold.ttf">
+            <string>SFUIText-Semibold</string>
+        </array>
+        <array key="sf-ui-display-light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Recording View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainRecordingViewController" id="BYZ-38-t0r" customClass="MainRecordingViewController" customModule="iTranslateSample01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46S-Y4-eEC" customClass="RecordingButton" customModule="iTranslateSample01" customModuleProvider="target">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gsr-g9-1gz"/>
+                                    <constraint firstAttribute="width" constant="100" id="lUX-Y2-j6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="11"/>
+                                <color key="tintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                        <color key="value" red="0.75087350606918335" green="0.23632615804672241" blue="0.21173709630966187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ndg-7t-CNA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70R-OW-JFa">
+                                <rect key="frame" x="97" y="599" width="220" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="pAY-zX-6yS"/>
+                                    <constraint firstAttribute="height" constant="44" id="zlo-RW-Mdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="17"/>
+                                <color key="tintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Recordings">
+                                    <color key="titleColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showRecordingsButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWj-Kn-cmP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="46S-Y4-eEC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qY-Lh-vfp"/>
+                            <constraint firstItem="46S-Y4-eEC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HTx-hK-e72"/>
+                            <constraint firstItem="70R-OW-JFa" firstAttribute="top" secondItem="46S-Y4-eEC" secondAttribute="bottom" constant="101" id="lyR-7K-lXh"/>
+                            <constraint firstItem="70R-OW-JFa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAM-Yj-9FK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="recordingButton" destination="46S-Y4-eEC" id="a9n-PV-r0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Recordings View Controller-->
+        <scene sceneID="GNp-9w-K4S">
+            <objects>
+                <viewController storyboardIdentifier="RecordingsViewController" id="syi-NX-a5R" customClass="RecordingsViewController" customModule="iTranslateSample01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GbF-n0-Hk6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vCL-Ct-Uv6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translucent="NO" id="WY8-Ln-3ry">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Recordings" largeTitleDisplayMode="never" id="ZXt-ea-bLs">
+                                                <barButtonItem key="rightBarButtonItem" systemItem="done" id="T1o-w4-mwU">
+                                                    <connections>
+                                                        <action selector="DoneButtonClicked:" destination="syi-NX-a5R" id="ttJ-oy-jhH"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otj-WX-0f9">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view key="tableHeaderView" contentMode="scaleToFill" id="Uyn-bd-6yh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENTLY USED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ey-t9-T6a">
+                                                    <rect key="frame" x="15" y="12" width="105" height="16"/>
+                                                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                                                    <color key="textColor" red="0.63137254899999995" green="0.66666666669999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="4Ey-t9-T6a" firstAttribute="leading" secondItem="Uyn-bd-6yh" secondAttribute="leading" constant="15" id="A7K-es-nf6"/>
+                                                <constraint firstItem="4Ey-t9-T6a" firstAttribute="centerY" secondItem="Uyn-bd-6yh" secondAttribute="centerY" id="fxw-Iy-RtC"/>
+                                            </constraints>
+                                        </view>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hoD-Te-A0K">
+                                                <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hoD-Te-A0K" id="tLT-3y-ceb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="syi-NX-a5R" id="Gnk-px-4dS"/>
+                                            <outlet property="delegate" destination="syi-NX-a5R" id="ieM-yw-8Vm"/>
+                                        </connections>
+                                    </tableView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VON-Q6-lUs" customClass="RecordPlayerView" customModule="iTranslateSample01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="852" width="414" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="BMJ-he-ice"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vCL-Ct-Uv6" firstAttribute="leading" secondItem="VJB-FA-ybo" secondAttribute="leading" id="Ddg-h1-T6q"/>
+                            <constraint firstItem="vCL-Ct-Uv6" firstAttribute="top" secondItem="VJB-FA-ybo" secondAttribute="top" id="KE6-80-Teu"/>
+                            <constraint firstItem="vCL-Ct-Uv6" firstAttribute="bottom" secondItem="GbF-n0-Hk6" secondAttribute="bottom" id="fxw-sZ-CmB"/>
+                            <constraint firstItem="vCL-Ct-Uv6" firstAttribute="trailing" secondItem="VJB-FA-ybo" secondAttribute="trailing" id="jPD-f7-YTM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VJB-FA-ybo"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="VON-Q6-lUs" id="yjo-Mb-ns4"/>
+                        <outlet property="tableView" destination="otj-WX-0f9" id="DLI-3V-hd7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDZ-3P-Rq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="142.63392857142856"/>
+        </scene>
+        <!--Permission Request View Controller-->
+        <scene sceneID="TYd-cq-WsW">
+            <objects>
+                <viewController storyboardIdentifier="PermissionRequestViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="bnj-RW-rf7" customClass="PermissionRequestViewController" customModule="iTranslateSample01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="opG-mQ-szc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU0-v5-Nyx">
+                                <rect key="frame" x="49.5" y="204" width="315" height="488"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-0U-37T">
+                                        <rect key="frame" x="45" y="133.5" width="225" height="319.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-vh-T9D">
+                                                <rect key="frame" x="52.5" y="0.0" width="120" height="195.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="kGL-WM-UtR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                        <color key="tintColor" red="0.63137254899999995" green="0.66666666669999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="O0v-RI-hf3"/>
+                                                            <constraint firstAttribute="width" constant="120" id="qOG-Ym-1ab"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TD3-cH-lrG">
+                                                        <rect key="frame" x="28" y="133" width="64.5" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="28"/>
+                                                        <color key="textColor" red="0.63137254901960782" green="0.66666666666666663" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Km-yR-lR2">
+                                                        <rect key="frame" x="43.5" y="179.5" width="33.5" height="16"/>
+                                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                                                        <color key="textColor" red="0.63137254899999995" green="0.66666666669999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6Pz-w2-tKV">
+                                                <rect key="frame" x="0.0" y="227.5" width="225" height="92"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxj-vw-SKP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="225" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="HeL-LP-uo5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="17"/>
+                                                        <color key="tintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Allow">
+                                                            <color key="titleColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="AllowButtonClicked:" destination="bnj-RW-rf7" eventType="touchUpInside" id="jWI-Bt-WXb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYV-0E-oit">
+                                                        <rect key="frame" x="0.0" y="48" width="225" height="44"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="yBJ-Gm-PCM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                                                        <color key="tintColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Maybe later">
+                                                            <color key="titleColor" red="0.1019607843" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="LaterButtonClicked:" destination="bnj-RW-rf7" eventType="touchUpInside" id="XmF-Vc-00z"/>
+                                                            <action selector="showRecordingsButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8K-6t-7oT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6Pz-w2-tKV" secondAttribute="trailing" id="PXM-R3-MYr"/>
+                                            <constraint firstItem="6Pz-w2-tKV" firstAttribute="leading" secondItem="dK8-0U-37T" secondAttribute="leading" id="jdu-Ny-KJ4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="dK8-0U-37T" firstAttribute="leading" secondItem="rU0-v5-Nyx" secondAttribute="leading" constant="45" id="31r-AC-gFg"/>
+                                    <constraint firstAttribute="height" constant="488" id="3wx-PF-ojj"/>
+                                    <constraint firstItem="dK8-0U-37T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rU0-v5-Nyx" secondAttribute="top" constant="35" id="6a1-mb-w6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="dK8-0U-37T" secondAttribute="trailing" constant="45" id="HcZ-R6-DvX"/>
+                                    <constraint firstAttribute="bottom" secondItem="dK8-0U-37T" secondAttribute="bottom" constant="35" id="TCM-Uo-Zv3"/>
+                                    <constraint firstAttribute="width" constant="315" id="sNV-Ju-uHM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63137254899999995" green="0.66666666669999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rU0-v5-Nyx" firstAttribute="centerX" secondItem="opG-mQ-szc" secondAttribute="centerX" id="2oq-YM-9f9"/>
+                            <constraint firstItem="rU0-v5-Nyx" firstAttribute="centerY" secondItem="opG-mQ-szc" secondAttribute="centerY" id="H0c-gp-ee2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VIP-5U-TTs"/>
+                    </view>
+                    <connections>
+                        <outlet property="permissionDescriptionLabel" destination="4Km-yR-lR2" id="6Vb-no-XQE"/>
+                        <outlet property="permissionImageView" destination="kGL-WM-UtR" id="dXC-j5-qn7"/>
+                        <outlet property="permissionTitleLabel" destination="TD3-cH-lrG" id="Dx3-eG-ZJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAw-kJ-UVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="record" width="120" height="120"/>
+    </resources>
+</document>
